@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'djangoApp1/css/base_main_master.css' %}">
+        {% block head_block %}
+
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'admin:index' %}">Admin</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-link" href="{% url 'djangoApp1:mainPage' %}">Home</a>
+                    <a class="nav-link" href="{% url 'djangoApp1:tutorsPage' %}">Tutors</a>
+                    <a class="nav-link" href="#">Courses</a>
+                </div>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="{% url 'djangoApp1:logoutPage' %}">Log-out</a>
+                </div>
+            </div>
+        </nav>
+
+        {% block body_block %}
+
+        {% endblock %}
+
+        <footer id="footer_log">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 d-flex justify-content-start align-items-center">
+                                <label for="facebook"><img class="image_footer" src="{% static 'djangoApp1/images/facebook.png' %}" alt="Picture was not found"></label>
+                                <a id="facebook" href="https://www.facebok.com">Edukas_official</a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 d-flex justify-content-start align-items-center">
+                                <label for="instagram"><img class="image_footer" src="{% static 'djangoApp1/images/instagram.png' %}" alt="Picture was not found"></label>
+                                <a id="instagram" href="https://www.instagram.com">@Edukas_official</a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 d-flex justify-content-start align-items-center">
+                                <label for="whatsapp"><img class="image_footer" src="{% static 'djangoApp1/images/whatsapp.png' %}" alt="Picture was not found"></label>
+                                <a id="whatsapp" href="https://www.whatsapp.com">081728483756</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    {% block script_block %}
+
+    {% endblock %}
+</html>

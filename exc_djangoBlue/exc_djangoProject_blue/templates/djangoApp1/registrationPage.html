@@ -1,0 +1,32 @@
+{% extends "djangoApp1/base_log.html" %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'djangoApp1/css/registrationPage_master.css' %}">
+    <title>Registration</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="contaier">
+        <div class="jumbotron">
+            <h1>Welcome to the Registration Page</h1>
+            <h3>Please fill the form below</h3>
+
+            {% if not registered %}
+                <form method="post">
+                    {% csrf_token %}
+                    {{ basic_form.as_p }}
+                    {{ additional_form.as_p }}
+
+                    <input type="submit" class="btn btn-primary" value="Register">
+                </form>
+            {% else %}
+                <h1>Thank your for your registration!</h1>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block script_block %}
+
+{% endblock %}

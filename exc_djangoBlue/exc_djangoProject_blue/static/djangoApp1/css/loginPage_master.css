@@ -1,0 +1,53 @@
+input{
+    display: block;
+    margin-top: 4px;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    margin-bottom: 15px;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+    transition: 0.2s;
+    border-bottom: 2px solid #1656a6;
+}
+
+input[type="submit"]{
+    margin-left: 35%;
+    background-color: #2b87e3;
+    border: none;
+    color: #fcfcfc;
+    padding: 5px;
+    border-radius: 5px;
+    width: 30%;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover{
+    transition: 0.2s;
+    background-color: #2357a6;
+}
+
+.main_container{
+    height: 100%;
+}
+
+.picture_login{
+    flex-direction: column;
+}
+
+.create_account{
+    margin-top: 5%;
+    flex-direction: column;
+}
+
+#user_login_pict{
+    width: 50px;
+    height: 50px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'djangoApp1/css/base_log_master.css' %}">
+        {% block head_block %}
+            <!--Title and css goes here-->
+        {% endblock %}
+    </head>
+    <body style="height: 100%;">
+        {% block body_block %}
+        <!-- Main contents goes here -->
+        {% endblock %}
+
+        <footer id="footer_log">
+            <div class="container-fluid">
+                <label for="facebook"><img class="image_footer" src="{% static 'djangoApp1/images/facebook.png' %}" alt="Picture was not found"></label>
+                <a id="facebook" href="https://www.facebok.com">Edukas_official</a>
+
+                <label for="instagram"><img class="image_footer" src="{% static 'djangoApp1/images/instagram.png' %}" alt="Picture was not found"></label>
+                <a id="instagram" href="https://www.instagram.com">@Edukas_official</a>
+
+                <label for="whatsapp"><img class="image_footer" src="{% static 'djangoApp1/images/whatsapp.png' %}" alt="Picture was not found"></label>
+                <a id="whatsapp" href="https://www.whatsapp.com">081728483756</a>
+            </div>
+        </footer>
+    </body>
+    {% block script_block %}
+        <!-- Scripts goes here -->
+    {% endblock %}
+</html>

@@ -1,0 +1,51 @@
+{% extends "djangoApp1/base_main.html" %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'djangoApp1/css/tutorsPage_master.css' %}">
+    <title>Tutors</title>
+    <style>
+        .container_1{
+            background-image: url("{% static 'djangoApp1/images/background_cont1.jpg' %}");
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container-fluid container_1">
+        <h1 class="display-4 text_align_center header_1">Below is our list of tutors</h1>
+        {% if tutor_data %}
+            <div class="container">
+                <table>
+                    <thead>
+                        <th class="text_align_center">First Name</th>
+                        <th class="text_align_center">Last Name</th>
+                        <th class="text_align_center">Email</th>
+                        <th class="text_align_center">Teach Field</th>
+                    </thead>
+                    {% for tutor in tutor_data %}
+                        <tr>
+                            <td>{{ tutor.tutor_firstname }}</td>
+                            <td>{{ tutor.tutor_lastname }}</td>
+                            <td>{{ tutor.tutor_email }}</td>
+                            <td>{{ tutor.tutor_teach_field }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block script_block %}
+    <script>
+        window.onload = function(){
+            all_row = $("tr")
+            for(let index=1; index<all_row.length-1; index++){
+                if(all_row.eq(index).css("background-color") == "rgb(247, 247, 245)"){
+                    all_row.eq(index+1).css("background-color", "rgb(77, 160, 219)")
+                }
+            }
+        }
+    </script>
+{% endblock %}

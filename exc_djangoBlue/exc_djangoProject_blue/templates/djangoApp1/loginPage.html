@@ -1,0 +1,37 @@
+{% extends "djangoApp1/base_log.html" %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'djangoApp1/css/loginPage_master.css' %}">
+<title>Log in</title>
+{% endblock %}
+
+{% block body_block %}
+     <div class="container main_container d-flex justify-content-center align-items-center">
+          <div class="jumbotron main_jumbotron">
+                <div class="row">
+                      <div class="col-md-12 d-flex align-items-center picture_login">
+                           <img id="user_login_pict" src="{% static 'djangoApp1\images\user_login.png' %}" alt="Picture was not found">
+                           <h3>Log In</h3>
+                      </div>
+                      <hr class="my-4">
+                      <div class="col-md-12">
+                           <form action="" method="post">
+                                {% csrf_token %}
+                                <input type="text" name="username" placeholder="Username">
+                                <input type="password" name="password" placeholder="Password">
+                                <input type="submit" value="Log in">
+                           </form>
+                           <div class="container create_account d-flex justify-content-center align-items-center">
+                                <a><em>Not registered yet?</em></a><br>
+                                <a href="{% url 'djangoApp1:registrationPage' %}">Create Account!</a>
+                           </div>
+                      </div>
+                </div>
+           </div>
+     </div>
+{% endblock %}
+
+{% block script_block %}
+
+{% endblock %}

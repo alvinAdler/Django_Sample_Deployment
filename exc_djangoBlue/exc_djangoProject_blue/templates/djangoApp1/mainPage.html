@@ -1,0 +1,71 @@
+{% extends "djangoApp1/base_main.html" %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'djangoApp1/css/mainPage_master.css' %}">
+    <title>Edukas</title>
+    <style>
+        .container_1{
+            background-image: url("{% static 'djangoApp1/images/background_cont1.jpg' %}");
+        }
+
+        .container_2{
+            background-image: url("{% static 'djangoApp1/images/background_cont2.jpg' %}");
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container-fluid container_1">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron jumbotron_1">
+                    <h1 class="display-4">Edukas</h1>
+                    <p class="lead"><em>~Where incredible journey of education began~</em></p>
+                    <hr class="my-4">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex aliquam quaerat laudantium blanditiis explicabo temporibus nemo dicta commodi repellendus labore!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container_2">
+        <h2 class="display-4 text_align_center">What do we offer?</h2>
+        <div class="row col_holder">
+            <div class="col-md-4 col-12 card_holder d-flex justify-content-center align-items-center">
+                <div class="card" style="width: 18rem;">
+                    <img class="card_image" src="{% static 'djangoApp1/images/card_background.jpg' %}" alt="Picture was not found">
+                    <div class="card-body">
+                        <h5 class="card-title">Sample Header</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea repellat pariatur enim iusto, cumque eos nobis quis! Cupiditate, in dolor dolore sit nihil, amet maxime repudiandae cumque, nobis nisi minima!</p>
+                        <a class="btn btn-info" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 card_holder d-flex justify-content-center align-items-center">
+                <div class="card" style="width: 18rem;">
+                    <img class="card_image" src="{% static 'djangoApp1/images/card_background.jpg' %}" alt="Picture was not found">
+                    <div class="card-body">
+                        <h5 class="card-title">Sample Header</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea repellat pariatur enim iusto, cumque eos nobis quis! Cupiditate, in dolor dolore sit nihil, amet maxime repudiandae cumque, nobis nisi minima!</p>
+                        <a class="btn btn-info" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 card_holder d-flex justify-content-center align-items-center">
+                <div class="card" style="width: 18rem;">
+                    <img class="card_image" src="{% static 'djangoApp1/images/card_background.jpg' %}" alt="Picture was not found">
+                    <div class="card-body">
+                        <h5 class="card-title">Sample Header</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea repellat pariatur enim iusto, cumque eos nobis quis! Cupiditate, in dolor dolore sit nihil, amet maxime repudiandae cumque, nobis nisi minima!</p>
+                        <a class="btn btn-info" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script_block %}
+
+{% endblock %}

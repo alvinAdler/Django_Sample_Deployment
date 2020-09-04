@@ -1,0 +1,27 @@
+{% extends "djangoApp1/base_log.html" %}
+
+{% block head_block %}
+    <title>Log out</title>
+    <style>
+        .container_logout{
+            height: 100%;
+        }
+
+        .jumbotron_logout{
+            flex-direction: column;
+        }
+    </style>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container d-flex justify-content-center align-items-center container_logout">
+        <div class="jumbotron d-flex justify-content-center align-items-center jumbotron_logout">
+            <h1>Thank you for your visit!</h1>
+            <p><em>Return to <a href="{% url 'djangoApp1:loginPage' %}">Log in page</a></em></p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script_block %}
+
+{% endblock %}

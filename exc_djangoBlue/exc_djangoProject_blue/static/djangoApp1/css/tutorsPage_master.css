@@ -1,0 +1,31 @@
+body{
+    background-color: #7dd6ff;
+}
+
+table{
+    margin: auto;
+    border: 3px solid black;
+}
+
+th{
+    border: 3px solid black;
+}
+
+tr{
+    background-color: rgb(247, 247, 245);
+}
+
+td{
+    border: 2px solid black;
+}
+
+.container_1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 30px 100px 30px;
+    margin-bottom: 30px;
+}
+
+.header_1{
+    text-shadow: 5px 3px 15px black;
+}
